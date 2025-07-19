@@ -1,0 +1,41 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center p-8 glass-card rounded-3xl shadow-2xl max-w-md mx-auto">
+        <!-- Error Icon -->
+        <div class="mb-8">
+            <div class="w-24 h-24 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-tools text-yellow-500 text-4xl"></i>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <h1 class="text-6xl font-black text-gray-900 dark:text-white mb-4">503</h1>
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Service Unavailable</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">
+            We're temporarily unable to process your request. Please try again in a few minutes.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="space-y-4">
+            <button onclick="location.reload()" class="btn-modern inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <i class="fas fa-redo mr-2"></i>
+                Try Again
+            </button>
+            
+            <a href="{{ route('welcome') }}" class="btn-modern inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                <i class="fas fa-home mr-2"></i>
+                Go Home
+            </a>
+        </div>
+
+        <!-- Additional Help -->
+        <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+                We're working to restore service as quickly as possible.
+            </p>
+        </div>
+    </div>
+</div>
+@endsection 

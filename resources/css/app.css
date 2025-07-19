@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+.sidebar {
+    transition: all 0.3s;
+}
+
+/* Chart container responsive */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
+
+/* Weather icons */
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Activity type badges using @apply */
+.badge-planting {
+    @apply bg-green-100 text-green-800;
+}
+.badge-watering {
+    @apply bg-blue-100 text-blue-800;
+}
+.badge-harvesting {
+    @apply bg-yellow-100 text-yellow-800;
+}
+.badge-fertilizing {
+    @apply bg-purple-100 text-purple-800;
+}
+.badge-pruning {
+    @apply bg-red-100 text-red-800;
+}
+.badge-other {
+    @apply bg-gray-100 text-gray-800;
+}
